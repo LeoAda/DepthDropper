@@ -1,0 +1,12 @@
+<button
+  mat-raised-button
+  color="primary"
+  *ngIf="!isFalling"
+  (click)="dropRock()"
+>
+  Drop
+</button>
+<button mat-raised-button color="warn" *ngIf="isFalling" (click)="stopRock()">
+  Boom!
+</button>
+<p>{{ dropTime }} ms</p>

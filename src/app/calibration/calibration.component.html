@@ -1,0 +1,20 @@
+<mat-icon fontIcon="play_arrow" *ngIf="!isCalibrating"></mat-icon>
+<mat-icon fontIcon="fiber_manual_record" *ngIf="isCalibrating"></mat-icon>
+<!-- <mat-icon fontIcon="stop"></mat-icon> -->
+<p *ngIf="isCalibrating">{{ cycle }}</p>
+<button
+  mat-raised-button
+  color="primary"
+  *ngIf="!isCalibrating"
+  (click)="startCalibration()"
+>
+  Start calibration
+</button>
+<button
+  mat-raised-button
+  color="warn"
+  *ngIf="isCalibrating"
+  (click)="reaction()"
+>
+  ROCK
+</button>

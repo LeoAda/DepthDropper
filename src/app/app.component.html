@@ -6,5 +6,7 @@
     (fallTime)="depthResult($event)"
   ></timer>
   <rock #rockInstance></rock>
-  <p *ngIf="depth != 0">Result : {{ depth | number : "1.0-2" }} m</p>
+  <h3 class="result" *ngIf="depth != 0">
+    Result : {{ depth | number : "1.0-2" }} m
+  </h3>
 </div>
